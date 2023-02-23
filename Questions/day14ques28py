@@ -1,0 +1,9 @@
+# Given the names of countries - states in a json file, load the file , read the json objects and then print the cities against a country
+
+import json
+
+data = json.load(open('country-state.json'))
+for country in data:
+    if country == 'countries':
+        for country in data[country]:
+            print(country['country'], country['states'])
